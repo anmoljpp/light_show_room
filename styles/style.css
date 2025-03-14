@@ -1,0 +1,252 @@
+/* Reset CSS */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f3f3f3;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Main Container */
+.main {
+    width: 100%;
+    margin: 0 auto;
+    background: #fff;
+}
+
+/* Header */
+.header {
+    background: #232f3e;
+    padding: 10px 0;
+    text-align: center;
+}
+
+#logo_image {
+    width: 150px;
+    height: auto;
+}
+
+/* Navigation Bar */
+.menubar {
+    background: #131921;
+    padding: 10px 0;
+}
+
+#menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+#menu li {
+    margin: 0 15px;
+}
+
+#menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 3px;
+    transition: background 0.3s ease;
+}
+
+#menu a:hover {
+    background: #ff9900;
+    color: #000;
+}
+
+#form {
+    margin-left: auto;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+}
+
+#form input[type="text"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    width: 300px;
+}
+
+#form input[type="submit"] {
+    padding: 8px 12px;
+    background: #ff9900;
+    border: none;
+    border-radius: 3px;
+    color: #fff;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+#form input[type="submit"]:hover {
+    background: #e68a00;
+}
+
+/* Content Area */
+.content {
+    display: flex;
+    padding: 20px;
+}
+
+#sidebar {
+    width: 250px;
+    background: #f3f3f3;
+    padding: 10px;
+    margin-right: 20px;
+    border-radius: 5px;
+}
+
+#sidebar_title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+#cats {
+    list-style: none;
+    padding: 0;
+}
+
+#cats li {
+    margin: 10px 0;
+}
+
+#cats a {
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+#cats a:hover {
+    color: #ff9900;
+}
+
+#content_area {
+    flex: 1;
+}
+
+#shopping_cart {
+    background: #232f3e;
+    color: #fff;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+#shopping_cart a {
+    color: #ff9900;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+#shopping_cart a:hover {
+    text-decoration: underline;
+}
+
+#products_box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+#single_product {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    width: calc(25% - 20px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+#single_product:hover {
+    transform: translateY(-5px);
+}
+
+#single_product img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Footer */
+#footer {
+    background: #232f3e;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
+}
+
+#footer h2 {
+    font-size: 16px;
+    font-weight: normal;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #form {
+        margin: 10px 0;
+    }
+
+    #form input[type="text"] {
+        width: 100%;
+    }
+
+    .content {
+        flex-direction: column;
+    }
+
+    #sidebar {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    #single_product {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    #single_product {
+        width: 100%;
+    }
+}
